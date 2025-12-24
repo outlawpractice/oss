@@ -1,0 +1,19 @@
+[package]
+name = "connector-caldav"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "CalDAV connector for Q SDK"
+
+[features]
+default = []
+
+[dependencies]
+async-trait.workspace = true
+connector-sdk.workspace = true
+connector-webdav.workspace = true
+icalendar = "0.16"
+reqwest.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true

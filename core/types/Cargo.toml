@@ -1,0 +1,15 @@
+[package]
+name = "core-types"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Core types for Q SDK"
+
+[features]
+default = ["std", "serde"]
+std = []
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { workspace = true, optional = true }
+thiserror.workspace = true

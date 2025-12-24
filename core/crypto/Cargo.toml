@@ -1,0 +1,17 @@
+[package]
+name = "core-crypto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Cryptography utilities for Q SDK"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+aes-gcm = "0.10"
+rand = "0.8"
+sha2 = "0.10"
+thiserror.workspace = true
+zeroize = { version = "1.0", features = ["derive"] }

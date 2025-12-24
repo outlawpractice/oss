@@ -1,0 +1,16 @@
+[package]
+name = "core-db"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Database utilities for Q SDK"
+
+[features]
+default = ["postgres"]
+postgres = ["sqlx/postgres"]
+sqlite = ["sqlx/sqlite"]
+
+[dependencies]
+sqlx = { version = "0.8", features = ["runtime-tokio", "macros"] }
+thiserror.workspace = true
+tokio.workspace = true

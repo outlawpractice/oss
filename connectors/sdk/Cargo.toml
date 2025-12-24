@@ -1,0 +1,18 @@
+[package]
+name = "connector-sdk"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Connector SDK for building Q integrations"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+async-trait.workspace = true
+core-http.workspace = true
+core-types.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true

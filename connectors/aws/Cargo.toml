@@ -1,0 +1,21 @@
+[package]
+name = "connector-aws"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "AWS connector for Q SDK"
+
+[features]
+default = ["s3"]
+s3 = []
+dynamodb = []
+sqs = []
+
+[dependencies]
+async-trait.workspace = true
+aws-config = "1.0"
+aws-sdk-s3 = "1.0"
+connector-sdk.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true

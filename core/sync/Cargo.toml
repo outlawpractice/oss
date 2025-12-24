@@ -1,0 +1,16 @@
+[package]
+name = "core-sync"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Synchronization engine for Q SDK"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+async-trait.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio = { version = "1.0", features = ["sync", "time"] }

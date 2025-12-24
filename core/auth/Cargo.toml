@@ -1,0 +1,19 @@
+[package]
+name = "core-auth"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Authentication utilities for Q SDK"
+
+[features]
+default = ["std", "oauth2"]
+std = []
+oauth2 = ["dep:oauth2"]
+jwt = ["dep:jsonwebtoken"]
+
+[dependencies]
+core-types.workspace = true
+jsonwebtoken = { version = "9.0", optional = true }
+oauth2 = { version = "4.4", optional = true }
+serde.workspace = true
+thiserror.workspace = true
