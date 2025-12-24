@@ -27,3 +27,6 @@ connector-webdav = { version = "0.1", path = "webdav" }
 connector-caldav = { version = "0.1", path = "caldav" }
 connector-smtp = { version = "0.1", path = "smtp" }
 connector-payrix = { version = "0.1", path = "payrix" }
+
+# External dependencies
+payrix = { version = "0.1", path = "../payrix/payrix" }
