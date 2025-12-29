@@ -1,7 +1,20 @@
 //! AWS connector for Q SDK
+//!
+//! Provides connectors for various AWS services:
+//! - S3 (storage)
+//! - SES (email sending)
+//! - SNS (notifications)
 #![warn(missing_docs)]
 
 pub use connector_sdk::{Connector, Error, Result};
+
+/// AWS SES email sending module
+#[cfg(feature = "ses")]
+pub mod ses;
+
+/// AWS SNS notification handling module
+#[cfg(feature = "sns")]
+pub mod sns;
 
 /// AWS S3 connector
 #[cfg(feature = "s3")]
