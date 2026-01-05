@@ -1,9 +1,4 @@
 //! Authentication credential types
-//!
-//! These types are designed to work in no_std environments when the `std` feature is disabled.
-
-#[cfg(not(feature = "std"))]
-use alloc::string::String;
 
 /// OAuth2 credentials for providers that use OAuth
 #[derive(Debug, Clone)]

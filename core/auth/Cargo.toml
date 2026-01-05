@@ -7,6 +7,7 @@ description = "Authentication and OAuth utilities for Q SDK"
 
 [features]
 default = ["std", "serde"]
+# Standard library support (required - thiserror requires std)
 std = []
 # Serialization support
 serde = ["dep:serde", "chrono/serde"]

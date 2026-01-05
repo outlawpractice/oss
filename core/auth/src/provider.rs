@@ -2,7 +2,7 @@
 //!
 //! Provides the `OAuthProvider` trait for implementing OAuth providers.
 
-use core::fmt;
+use std::fmt;
 
 use crate::error::OAuthErrorKind;
 

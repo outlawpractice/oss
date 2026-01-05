@@ -48,10 +48,7 @@
 //! ```
 
 #![warn(missing_docs)]
-#![cfg_attr(not(feature = "std"), no_std)]
-
-#[cfg(not(feature = "std"))]
-extern crate alloc;
+// Note: no_std support removed because thiserror requires std
 
 // Error types (always available)
 pub mod error;
