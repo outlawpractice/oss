@@ -1,0 +1,22 @@
+# Build artifacts
+target/
+*.rlib
+*.rmeta
+Cargo.lock
+
+# Environment
+.env
+.env.local
+
+# Databases
+*.db
+*.sqlite
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

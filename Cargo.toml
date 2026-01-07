@@ -1,0 +1,51 @@
+[workspace]
+resolver = "2"
+members = [
+    "core/types",
+    "core/http",
+    "core/crypto",
+    "core/db",
+    "core/auth",
+    "core/sync",
+    "connectors/sdk",
+    "connectors/aws",
+    "connectors/webdav",
+    "connectors/caldav",
+    "connectors/smtp",
+    "connectors/payrix",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/outlawpractice/oss"
+
+[workspace.dependencies]
+# Shared dependencies
+async-trait = "0.1"
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "1.0", features = ["rt"] }
+validator = { version = "0.20", features = ["derive"] }
+
+# Core crates
+core-types = { version = "0.1", path = "core/types" }
+core-http = { version = "0.1", path = "core/http" }
+core-crypto = { version = "0.1", path = "core/crypto" }
+core-db = { version = "0.1", path = "core/db" }
+core-auth = { version = "0.1", path = "core/auth" }
+core-sync = { version = "0.1", path = "core/sync" }
+
+# Connector crates
+connector-sdk = { version = "0.1", path = "connectors/sdk" }
+connector-aws = { version = "0.1", path = "connectors/aws" }
+connector-webdav = { version = "0.1", path = "connectors/webdav" }
+connector-caldav = { version = "0.1", path = "connectors/caldav" }
+connector-smtp = { version = "0.1", path = "connectors/smtp" }
+connector-payrix = { version = "0.1", path = "connectors/payrix" }
+
+# External dependencies (from separate repo)
+payrix = { git = "https://github.com/outlawpractice/payrix-rs" }
